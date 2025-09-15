@@ -1,7 +1,6 @@
 <h3>{{ titolo }}</h3>
-<div class="d-flex flex-wrap gap-5">
+<div class="schede-container">
     @for( o of operazioni; track o.amount){
-    <app-scheda-contabile></app-scheda-contabile>
+    <app-scheda-contabile [operazioni]="o"></app-scheda-contabile>
     }
-
 </div>

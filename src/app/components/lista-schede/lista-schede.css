@@ -1,6 +1,11 @@
-:host {
-    display: block;
+/* :host {
     width: 100%;
     min-height: 100px;
     padding: 10px;
+} */
+
+.schede-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
