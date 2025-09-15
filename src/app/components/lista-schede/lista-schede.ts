@@ -1,11 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { SchedaContabile } from "../scheda-contabile/scheda-contabile";
 
 @Component({
   selector: 'app-lista-schede',
-  imports: [],
+  imports: [SchedaContabile],
   templateUrl: './lista-schede.html',
   styleUrl: './lista-schede.css'
 })
 export class ListaSchede {
-
+  @Input()
+  titolo: string = "";
 }

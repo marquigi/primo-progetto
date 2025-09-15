@@ -11,4 +11,8 @@ import { ListaSchede } from "./components/lista-schede/lista-schede";
 })
 export class App {
   protected readonly title = signal('primo-progetto');
+
+  titolo: string = "";
+
+  // operazioni: Transizioni[] = [];
 }
