@@ -1,8 +1,8 @@
 export type Transazioni = {
-    amount: number;
-    date: number;
-    business: string;
     name: string;
-    type: string;
+    business: string;
     account: string;
+    date: number;
+    type: string;
+    amount: number;
 }
