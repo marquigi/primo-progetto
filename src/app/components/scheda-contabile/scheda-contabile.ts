@@ -1,10 +1,10 @@
 import { Component, Input } from '@angular/core';
 import { Transazioni } from '../../models/scheda';
-import { CurrencyPipe } from '@angular/common';
+import { CurrencyPipe, NgClass, UpperCasePipe } from '@angular/common';
 
 @Component({
   selector: 'app-scheda-contabile',
-  imports: [CurrencyPipe],
+  imports: [CurrencyPipe, UpperCasePipe, NgClass],
   templateUrl: './scheda-contabile.html',
   styleUrl: './scheda-contabile.css'
 })

@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { SchedaContabile } from "../scheda-contabile/scheda-contabile";
 import { Transazioni } from '../../models/scheda';
 
+
 @Component({
   selector: 'app-lista-schede',
   imports: [SchedaContabile],

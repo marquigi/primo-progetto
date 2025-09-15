@@ -1,12 +1,16 @@
 @if( operazioni ){
-<div class="card" style="max-width: 18rem;">
+<div class="card" style="max-width: 18rem;" [ngClass]="{
+        verde: operazioni.type === 'invoice',
+        grigio: operazioni.type === 'withdrawal'}">
     <div class="card-body">
-        <h5 class="card-title">{{ operazioni.amount }}</h5>
-        <p class="card-text">{{ operazioni.date }}</p>
-        <p class="card-text">{{ operazioni.business }}</p>
-        <p class="card-text">{{ operazioni.name }}</p>
-        <p class="card-text">{{ operazioni.type }}</p>
-        <p class="card-text">{{ operazioni.account | currency:'EUR':'symbol': '1.2-2' }}</p>
+        <h5 class="card-amount">{{ operazioni.amount }}</h5>
+        <p class="card-date">{{ operazioni.date }}</p>
+        <p class="card-business">{{ operazioni.business |uppercase }}</p>
+        <p class="card-name">{{ operazioni.name }}</p>
+        <p class="card-type">{{ operazioni.type }}</p>
+        <p class="card-account" [ngClass]="{ giallo: (+operazioni.account) > 7500000000 }">
+            {{ operazioni.account | currency:'EUR':'symbol':'1.2-2' }}
+        </p>
     </div>
 </div>
 }
