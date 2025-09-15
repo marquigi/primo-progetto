@@ -1,10 +1,12 @@
+@if( operazioni ){
 <div class="card" style="max-width: 18rem;">
     <div class="card-body">
-        <h5 class="card-title">Primary card title</h5>
-        <p class="card-text">dati</p>
-        <p class="card-text">dati</p>
-        <p class="card-text">dati</p>
-        <p class="card-text">dati</p>
-        <p class="card-text">dati</p>
+        <h5 class="card-title">{{ operazioni.amount }}</h5>
+        <p class="card-text">{{ operazioni.date }}</p>
+        <p class="card-text">{{ operazioni.business }}</p>
+        <p class="card-text">{{ operazioni.name }}</p>
+        <p class="card-text">{{ operazioni.type }}</p>
+        <p class="card-text">{{ operazioni.account | currency:'EUR':'symbol': '1.2-2' }}</p>
     </div>
 </div>
+}
